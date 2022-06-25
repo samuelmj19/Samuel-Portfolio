@@ -1,3 +1,9 @@
+:root{
+    --first-color: #18045f;
+    --first-color-deg: #18045fcc;
+    --strong-color: #fb2e5a 
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -8,7 +14,10 @@
 body{
     font-family: 'Work Sans', sans-serif;
     font-size: 62.5%;
-}
+    display: grid;
+    grid-template-columns: 10% 90%;
+    overflow-x: hidden;
+} 
 nav{
     position: fixed;
     top: 0;
@@ -16,20 +25,25 @@ nav{
     left: 0;
     bottom: 0;
     display: flex;
-    justify-content: space-between;
-    padding: 10px 3%;
-    width: 100vw;
-    height: 50px;
+    width: 10vw;
+    height: 100vh;
+    background-color: #180455ed;
     
 }
 .menu-list-container{
     display: flex;
+    flex-direction: column;
     width: 40%;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     font-size: 1.2rem;
+    gap: 50px;
+    padding: 20px;
+    
 }
 .menu-list-container li a{
-    color: #000;
+    color: var(--strong-color);
+    font-weight: bold;
     cursor: pointer;
     
 }
@@ -43,7 +57,7 @@ nav{
 
 .profile-background{
     position: relative;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     object-fit: cover;
     object-position: center center;
@@ -53,21 +67,21 @@ nav{
     font-size: 5rem;
     width: 400px;
 }
-.profile-info-container{
+.parallax-content-container{
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     top: 0;
     right: 0;
-    left: 0; 
+    left: 150px; 
     bottom: 0;
     padding: 50px;
-    gap: 150px;
+    gap: 50px;
    
 }
 .user-card-container{
-    width: 30%;
+    width: 40%;
     background-color: aliceblue;
     border-radius: 10px;
     height: 200px;
@@ -134,10 +148,77 @@ nav{
 }
 
 
+/* ------------------------------* Profile Section *--------------------------------- */
 
+.projects-section{
+    background: linear-gradient(45deg, var(--strong-color), var(--first-color) );
+    display: flex;
+    justify-content: center;
+    
+}
+.projects-container{
 
+}
+.projects-section-tittle{
+    font-size: 4rem;
+    margin: 50px 10%; 
+    color: var(--strong-color);
+}
 
-.portfolio-section{
-    background: linear-gradient(45deg, #9633aa, #18045f);
-    min-height: 100vh;
+.projects-cards-container{
+    margin: 70px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80vw;
+    gap: 30px;
+    
+}
+.projects-card{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: inset 1px -2px 8px  #555;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    height: 250px;
+    overflow: hidden;
+    gap: 15px;
+    transition: .3s;
+    
+}
+.projects-card:hover{
+    transform: scale(1.3);
+    height: 300px;
+    margin: 20px;
+}
+.projects-card h3{
+    font-size: 1.2rem;
+}
+
+.projects-card-img{
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+}
+.project-card-btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.project-card-btn{
+    width: 50px;
+    background-color: var(--strong-color);
+    border: none;
+    border-radius: 10px;
+    height: 20px;
+    box-shadow: inset 1px 2px 4px 2px #81083b;
+    cursor: pointer;
+}
+.project-card-btn:hover{
+    background-color: #b30d52;
 }

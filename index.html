@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,11 +16,20 @@
     <header>
         
     </header>
+    <nav >
+        <!-- <span>Logo</span> -->
+        <ul class="menu-list-container">
+            <li><a href="#" class="pepe">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Stacks</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
     <main>
         <section class="profile-section">
-            <img src="https://www.xtrafondos.com/descargar.php?id=5846&resolucion=2560x1440" alt="profile background" class="profile-background">
+            <img src="https://www.xtrafondos.com/descargar.php?id=5846&resolucion=2560x1440" alt="profile background" class="parallax-background profile-background">
             
-            <div class="profile-info-container">
+            <div class="parallax-content-container">
                 <h2 class="profile-tittle">Hi, I am Samuel!</h2>
                 <article class="user-card-container">
                     <img src="https://zonadeprensard.com/wp-content/uploads/2022/01/Demon-Slayer-Rengoku-1-1200x675.jpg" alt="" class="user-img">
@@ -31,19 +41,65 @@
                 </article>
             </div>
         </section>
-        <nav>
-            <span>Logo</span>
-            <ul class="menu-list-container">
-                <li><a href="#" class="pepe">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Stacks</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <section class="portfolio-section">
-            <!-- <img src="" alt="" class="profile-background"> -->
+
+
+        <section class="projects-section">
+            <div class="projects-container">
+                <h2 class="projects-section-tittle" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Projects</h2>
+                <div class="projects-cards-container">
+                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <article  class="projects-card">
+                            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/Q743HABRBVA5VHY5CVGLTXAXSI.jpg" alt="" class="projects-card-img">
+                            <h3>web page name</h3>
+                            <div class="project-card-btn-container">
+                                <Button class="project-card-btn">Demo</Button>
+                                <Button class="project-card-btn">Repo</Button>
+                            </div>
+                        </article>
+                    </div>
+                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <article  class="projects-card">
+                            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/Q743HABRBVA5VHY5CVGLTXAXSI.jpg" alt="" class="projects-card-img">
+                            <h3>web page name</h3>
+                            <div class="project-card-btn-container">
+                                <Button class="project-card-btn">Demo</Button>
+                                <Button class="project-card-btn">Repo</Button>
+                            </div>
+                        </article>
+                    </div>
+                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <article  class="projects-card">
+                            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/Q743HABRBVA5VHY5CVGLTXAXSI.jpg" alt="" class="projects-card-img">
+                            <h3>web page name</h3>
+                            <div class="project-card-btn-container">
+                                <Button class="project-card-btn">Demo</Button>
+                                <Button class="project-card-btn">Repo</Button>
+                            </div>
+                        </article>
+                    </div>
+                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <article  class="projects-card">
+                            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/Q743HABRBVA5VHY5CVGLTXAXSI.jpg" alt="" class="projects-card-img">
+                            <h3>web page name</h3>
+                            <div class="project-card-btn-container">
+                                <Button class="project-card-btn">Demo</Button>
+                                <Button class="project-card-btn">Repo</Button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
         </section>
+
     </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            delay: 400
+        });
+    </script>
     <script src="./src/index.js"></script>
 </body>
 </html>
