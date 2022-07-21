@@ -12,30 +12,38 @@ class projectsCardClass {
 	constructor(
 		projectName,
 		projectImg, 
-		delay
+		delay,
+		demoUrl,
+		repoUrl
 	){
 		this.projectName = projectName,
 		this.projectImg = projectImg,
-		this.delay = delay
+		this.delay = delay,
+		this.demoUrl = demoUrl,
+		this.repoUrl = repoUrl
 	};
 	
 }
 
 
 
-const dataCardPusher = (name, itemImg, delay)=>{
+const dataCardPusher = (name, itemImg, delay, demoUrl, repoUrl)=>{
 	projectsCardArray.push(new projectsCardClass(
 		name,
 		itemImg,
-		delay
+		delay,
+		demoUrl,
+		repoUrl
 	))
 }
-dataCardPusher('youtube','https://www.youtube.com/img/desktop/yt_1200.png', 500)
-dataCardPusher('inazuma', '../public/20220621020225.png', 750)
-dataCardPusher('Lyue', '../public/20220621020547.png', 1000)
-dataCardPusher('Enkanomya', '../public/20220621020851.png', 1250)
-dataCardPusher('Mi casa', '../public/20220621020851.png', 1500)
-dataCardPusher('konoha', '../public/20220621021040.png',1750)
+dataCardPusher('Clock','../public/Clock.png', 500, 'https://samuelmj19.github.io/clock/' ,'https://github.com/samuelmj19/clock' )
+dataCardPusher('Sam Movies','../public/SamMovies.png', 500, 'https://samuemj19-sam-movies.netlify.app/' ,'https://github.com/samuelmj19/Platzi-movie' )
+dataCardPusher('PokeDex','../public/Pokedex.png', 500, 'https://samuelmj19.github.io/PokeDex/' ,'https://github.com/samuelmj19/PokeDex' )
+dataCardPusher('RPS MINI GAME','../public/RPS.png', 500, 'https://samuelmj19.github.io/Piedra-papel-tiejera/' ,'https://github.com/samuelmj19/Piedra-papel-tiejera' )
+dataCardPusher('Sam Shop','../public/SamShop.png', 500, 'https://samuelmj19-samshop.netlify.app/' ,'https://github.com/samuelmj19/SamShop' )
+dataCardPusher('Sam Weather','../public/sm-weather.png', 500, 'https://samuelmj19-sam-weather.netlify.app/' ,'https://github.com/samuelmj19/sm-weather' )
+dataCardPusher('StarBucks Clone','../public/StarBucks-clone.png', 500, 'https://samuelmj19.github.io/StarBucks-clone/' ,'https://github.com/samuelmj19/StarBucks-clone' )
+dataCardPusher('Twitter Clone','../public/Twitter-clone.png', 0, 'https://samuelmj19.github.io/twitter-clone/' ,'https://github.com/samuelmj19/twitter-clone/tree/master' )
 
 function projectsCardsMaker(){
 	projectsCardArray.forEach(card =>{
@@ -44,8 +52,8 @@ function projectsCardsMaker(){
 		const cardImg = document.createElement('img');
 		const cardName = document.createElement('h3');
 		const btnContainer = document.createElement('div');
-		const DemoBtn = document.createElement('Button');
-		const RepoBtn = document.createElement('Button');
+		const DemoBtn = document.createElement('a');
+		const RepoBtn = document.createElement('a');
 
 		divContainer.setAttribute('data-aos', 'fade-up');
 		divContainer.setAttribute('data-aos-anchor-placement', 'bottom-bottom');
@@ -60,9 +68,12 @@ function projectsCardsMaker(){
 
 		btnContainer.classList.add('project-card-btn-container');
 		DemoBtn.classList.add('project-card-btn');
+		DemoBtn.setAttribute('href', card.demoUrl)
 		DemoBtn.innerHTML= 'Demo';
 		RepoBtn.classList.add('project-card-btn');
 		RepoBtn.innerHTML= 'Repo';
+		RepoBtn.setAttribute('href', card.repoUrl)
+		
 
 		btnContainer.appendChild(DemoBtn);
 		btnContainer.appendChild(RepoBtn);
@@ -86,3 +97,26 @@ function projectsCardsMaker(){
 
 projectsCardsMaker();
 console.log(projectsCardArray)
+
+
+stacksBackground.addEventListener('mousemove', function(e){
+	let x = e.offsetX;
+	let y = e.offsetY;
+	let particles = document.createElement('span');
+	particles.classList.add('particles')
+	particles.style.left = (x) + 'px'
+	particles.style.top = y + 'px'
+
+	let size = Math.random() * 3;
+	particles.style.width = 2 + size+'px';
+	particles.style.height = 2 + size+'px';
+
+	let transformValue = Math.random() * 360;
+	particles.style.transform = `rotate(${transformValue}deg)`;
+
+	stacksBackground.appendChild(particles);
+
+	setTimeout(()=>{
+		particles.remove()
+	}, 2000)
+})

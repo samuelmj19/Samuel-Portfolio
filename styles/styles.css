@@ -11,6 +11,14 @@
     list-style: none;
     text-decoration: none;
 }
+input{
+    outline: none;
+}
+a{
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+}
 body{
     font-family: 'Work Sans', sans-serif;
     font-size: 62.5%;
@@ -28,6 +36,7 @@ nav{
     width: 10vw;
     height: 100vh;
     background-color: #180455ed;
+    z-index: 999;
     
 }
 .menu-list-container{
@@ -51,7 +60,11 @@ nav{
     border-bottom: solid 2px #000;
 }
 
-
+.section-title{
+    font-size: 3rem;
+    margin: 50px 10%; 
+    color: var(--strong-color);
+}
 
 /* ------------------------------* Profile Section *--------------------------------- */
 
@@ -152,23 +165,18 @@ nav{
 }
 
 
-/* ------------------------------* Profile Section *--------------------------------- */
+/* ------------------------------* Projects Section *--------------------------------- */
 
 .projects-section{
     background: linear-gradient(45deg, var(--strong-color), var(--first-color) );
     display: flex;
     justify-content: center;
-    
+    box-shadow: inset 10px -10px 60px 30px #1f00278f;
+    padding-bottom: 80px;
 }
 .projects-container{
 
 }
-.projects-section-tittle{
-    font-size: 4rem;
-    margin: 50px 10%; 
-    color: var(--strong-color);
-}
-
 .projects-cards-container{
     margin: 70px 0;
     display: flex;
@@ -182,8 +190,8 @@ nav{
     display: flex;
     flex-direction: column;
     width: 300px;
-    background-color: #fff;
-    box-shadow: inset 1px -2px 8px  #555;
+    background-color: #c09bb273;
+    box-shadow:  5px 2px 30px 5px #1a122093;
     border-radius: 10px;
     text-align: center;
     padding: 10px;
@@ -195,9 +203,7 @@ nav{
     
 }
 .projects-card:hover{
-    transform: scale(1.3);
-    height: 300px;
-    margin: 20px;
+    transform: translateY(-15px);
 }
 .projects-card h3{
     font-size: 1.2rem;
@@ -231,4 +237,139 @@ nav{
 }
 .project-card-btn:hover{
     background-color: #b30d52;
+}
+
+
+/* ------------------------------* Stacks Section *--------------------------------- */
+.stacks-section{
+    /* display: none; */
+} 
+.stacks-backgound{
+    box-shadow: 20px 0px 70px 40px #271a1ad5;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 1;
+    left: 150px;
+}
+.stacks-section-title{
+    font-size: 3rem;
+    padding: 30px 0;
+    z-index: 500;
+}
+.stacks-section-container{
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 650px;
+    display: flex;
+    padding: 0 5%;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+.stacks-technologies{
+    padding: 0 50px;
+    width: 25%;
+    text-align: center;
+}
+.fa-brands{
+    padding: 20px;
+    font-size: 4.5rem;
+    color: #fff;
+}
+.fa-html5{color: #f77f00;}
+.fa-css3-alt{color: #219ebc;}
+.fa-js{color: #ffb703;}
+.fa-react{ color: #023047;}
+.fa-git-alt{color: #e23424;}
+.fa-npm{color: #780116;}
+
+.particles-container{
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+
+/* ------------------------------* Stacks Section *--------------------------------- */
+
+
+.contact-section{
+    display: flex;
+    justify-content: center;
+    background: rgb(2,48,71);
+    background: linear-gradient(49deg, rgba(2,48,71,1) 0%, rgba(90,105,119,1) 88%);
+    padding: 150px 0;
+}
+.contact-container{
+    display: flex;
+    margin: 100px 0;
+    max-width: 800px;
+    justify-content: center;
+    box-shadow: 0 0 50px 0 rgb(24, 23, 23);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.contacts-titles{
+    font-size: 1.4rem;
+}
+.form-container{
+    padding: 20px;
+    width: 60%;
+    background: rgb(17,30,36);
+    background: linear-gradient(18deg, rgba(17,30,36,1) 0%, rgba(209,215,221,1) 88%);
+    font-size: 1.2rem;
+}
+.form-container form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.form-container form .block{
+    grid-column: 1 / 3;
+}
+.form-container p{
+    padding: 1rem;
+}
+.form-container button,
+.form-container input,
+.form-container textarea{
+    width: 100%;
+    border: none;
+    padding: 5px;
+    background: none;
+    border-bottom:solid 2px #780116 ;
+    outline: none;
+}
+.form-container .submitBtn{
+    background-color: #780116;
+    padding: .5rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    
+}
+
+
+
+
+.social_media-container{
+    background: rgb(40,43,45);
+    background: linear-gradient(18deg, rgba(40,43,45,1) 0%, rgba(15,15,15,1) 88%);
+    width: 40%;
+    color: #fff;
+    padding: 20px;
+}
+.social_media-container a{
+    color: #fff;
+}
+.social_media-container a:hover{
+    color: #555;
+}
+
+.social_media-container .fa-brands{
+    font-size: 1.2rem;
 }
