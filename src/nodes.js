@@ -11,3 +11,4 @@ const stacksBackground = document.querySelector('.particles-container');
 
 // -----------------* animations *--------------------
 const parallaxBackground = document.getElementsByClassName('parallax-background');
+const stacksParallaxBackground = document.getElementsByClassName('stacks-background');

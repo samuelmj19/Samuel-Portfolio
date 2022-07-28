@@ -1,10 +1,33 @@
 
-
-new simpleParallax(parallaxBackground, {
+new simpleParallax( parallaxBackground, {
 	delay: 1.6,
 	transition: 'cubic-bezier(0,0,0,1)',
-    scale: 1.5
+	scale: 1.5,
+	orientation: 'right'
 });
+new simpleParallax( stacksParallaxBackground, {
+	orientation: 'up',
+	delay:1.3,
+	scale: 1.3,
+	transition: 'cubic-bezier(0,0,0,1)',
+});
+
+
+
+
+// const createParallaxEffect= ({
+// 	background, 
+// 	orientation= 'up'
+// })=>{
+// 	new simpleParallax( background, {
+// 		delay: 1.6,
+// 		transition: 'cubic-bezier(0,0,0,1)',
+// 		scale: 1.3,
+// 		orientation,
+// 	});
+// }
+// createParallaxEffect({background: parallaxBackground, orientation: 'right'});
+// createParallaxEffect({ background: stacksParallaxBackground, orientation: 'right'});
 
 let projectsCardArray = [];
 
@@ -52,6 +75,7 @@ function projectsCardsMaker(){
 		const cardImg = document.createElement('img');
 		const cardName = document.createElement('h3');
 		const btnContainer = document.createElement('div');
+		const hoverBackground = document.createElement('div');
 		const DemoBtn = document.createElement('a');
 		const RepoBtn = document.createElement('a');
 
@@ -61,23 +85,28 @@ function projectsCardsMaker(){
 
 		articleProjectCard.classList.add('projects-card');
 
+		hoverBackground.classList.add('projects-card-hover_background')
+
 		cardImg.classList.add('projects-card-img');
 		cardImg.setAttribute('src', card.projectImg);
+		cardImg.setAttribute('loading', 'lazy');
 
 		cardName.innerText = card.projectName;
 
-		btnContainer.classList.add('project-card-btn-container');
-		DemoBtn.classList.add('project-card-btn');
+		// btnContainer.classList.add('project-card-btn-container');
+		// DemoBtn.classList.add('project-card-btn');
 		DemoBtn.setAttribute('href', card.demoUrl)
-		DemoBtn.innerHTML= 'Demo';
-		RepoBtn.classList.add('project-card-btn');
-		RepoBtn.innerHTML= 'Repo';
-		RepoBtn.setAttribute('href', card.repoUrl)
+		DemoBtn.style.height= '100%'
+		// DemoBtn.innerHTML= 'Demo';
+		// RepoBtn.classList.add('project-card-btn');
+		// RepoBtn.innerHTML= 'Repo';
+		// RepoBtn.setAttribute('href', card.repoUrl)
 		
 
-		btnContainer.appendChild(DemoBtn);
-		btnContainer.appendChild(RepoBtn);
-		articleProjectCard.appendChild(cardImg);
+		DemoBtn.appendChild(cardImg);
+		// btnContainer.appendChild(RepoBtn);
+		articleProjectCard.appendChild(hoverBackground);
+		articleProjectCard.appendChild(DemoBtn);
 		articleProjectCard.appendChild(cardName);
 		articleProjectCard.appendChild(btnContainer);
 		divContainer.appendChild(articleProjectCard);
