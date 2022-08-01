@@ -271,7 +271,7 @@ nav:hover .arrow-mobile-menu{
 
 .projects-card:hover{
     transform: translateY(-15px);
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 .projects-card h3{
     font-size: 1.2rem;
@@ -509,6 +509,9 @@ nav:hover .arrow-mobile-menu{
         flex-direction: column;
         align-items: center;
         gap: 50px;
+    }
+    .particles-container{
+        display: none;
     }
 
 
