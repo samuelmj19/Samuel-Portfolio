@@ -12,7 +12,9 @@
     text-decoration: none;
     color:#fff
 }
-
+html{
+    scroll-behavior: smooth;
+}
 
 
 /* ===== Scrollbar CSS ===== */
