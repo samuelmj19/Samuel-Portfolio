@@ -59,14 +59,14 @@ const dataCardPusher = (name, itemImg, delay, demoUrl, repoUrl)=>{
 		repoUrl
 	))
 }
-dataCardPusher('Clock','../public/Clock.png', 500, 'https://samuelmj19.github.io/clock/' ,'https://github.com/samuelmj19/clock' )
 dataCardPusher('Sam Movies','../public/SamMovies.png', 500, 'https://samuemj19-sam-movies.netlify.app/' ,'https://github.com/samuelmj19/Platzi-movie' )
+dataCardPusher('StarBucks Clone','../public/StarBucks-clone.png', 500, 'https://samuelmj19.github.io/StarBucks-clone/' ,'https://github.com/samuelmj19/StarBucks-clone' )
+dataCardPusher('Sam Shop','../public/SamShop.png', 500, 'https://samuelmj19-samshop.netlify.app/' ,'https://github.com/samuelmj19/SamShop' )
+dataCardPusher('Twitter Clone','../public/Twitter-clone.png', 0, 'https://samuelmj19.github.io/twitter-clone/' ,'https://github.com/samuelmj19/twitter-clone/tree/master' )
+dataCardPusher('Clock','../public/Clock.png', 500, 'https://samuelmj19.github.io/clock/' ,'https://github.com/samuelmj19/clock' )
+dataCardPusher('Sam Weather','../public/sm-weather.png', 500, 'https://samuelmj19-sam-weather.netlify.app/' ,'https://github.com/samuelmj19/sm-weather' )
 dataCardPusher('PokeDex','../public/Pokedex.png', 500, 'https://samuelmj19.github.io/PokeDex/' ,'https://github.com/samuelmj19/PokeDex' )
 dataCardPusher('RPS MINI GAME','../public/RPS.png', 500, 'https://samuelmj19.github.io/Piedra-papel-tiejera/' ,'https://github.com/samuelmj19/Piedra-papel-tiejera' )
-dataCardPusher('Sam Shop','../public/SamShop.png', 500, 'https://samuelmj19-samshop.netlify.app/' ,'https://github.com/samuelmj19/SamShop' )
-dataCardPusher('Sam Weather','../public/sm-weather.png', 500, 'https://samuelmj19-sam-weather.netlify.app/' ,'https://github.com/samuelmj19/sm-weather' )
-dataCardPusher('StarBucks Clone','../public/StarBucks-clone.png', 500, 'https://samuelmj19.github.io/StarBucks-clone/' ,'https://github.com/samuelmj19/StarBucks-clone' )
-dataCardPusher('Twitter Clone','../public/Twitter-clone.png', 0, 'https://samuelmj19.github.io/twitter-clone/' ,'https://github.com/samuelmj19/twitter-clone/tree/master' )
 
 function projectsCardsMaker(){
 	projectsCardArray.forEach(card =>{
