@@ -130,6 +130,30 @@ nav:hover .arrow-mobile-menu{
     font-size: 5rem;
     width: 400px;
 }
+.typing-animation{
+    position: relative;
+    color: rgba(63, 61, 61, 0.658);
+}
+.typing-animation::before{
+    content: "Samuel!";
+    position: absolute;
+    color: var(--strong-color);
+    width: 400px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid var(--strong-color);
+    animation: animate 3s steps(15) infinite;
+    filter: drop-shadow(0 0 20px var(--strong-color)) drop-shadow(0 0 50px var(--strong-color));
+}
+@keyframes animate 
+{
+    0%,10%,100%{
+        width: 0%;
+    }
+    70%,90%{
+        width: 84%;
+    }
+}
 .parallax-content-container{
     position: absolute;
     display: flex;
