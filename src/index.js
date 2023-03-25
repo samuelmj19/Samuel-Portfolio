@@ -96,6 +96,7 @@ function projectsCardsMaker(){
 		// btnContainer.classList.add('project-card-btn-container');
 		// DemoBtn.classList.add('project-card-btn');
 		DemoBtn.setAttribute('href', card.demoUrl)
+		DemoBtn.setAttribute('target', '_blank')
 		DemoBtn.style.height= '100%'
 		// DemoBtn.innerHTML= 'Demo';
 		// RepoBtn.classList.add('project-card-btn');
